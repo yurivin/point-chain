@@ -50,11 +50,21 @@ bondingTarget = 0.66      = our optimal bonded ratio
     },
 ```
 ## Calulations example for a given genesis example
+```aidl
+Example with bondedRatio = bondingTarget:
 
+period  periodProvision  cumulated      epochProvision
+f(0)    309 375 000      309 375 000	 847 602
+f(1)    159 375 000      468 750 000	 436 643
+f(2)     84 375 000      553 125 000	 231 164
+f(3)     46 875 000      600 000 000	 128 424
+
+```
+```bondedRatio``` does not affects results because ```maxVariance=0``` in this example genesis
 ```
 //apoint is a minimal part of a point token
 
-//Year(period) x=1 and bondedRatio = 0.5
+//Second Year(period) x=1 and bondedRatio = 0.5
 (300000000 * (1 - 0.5)^1 + 9375000) * (1 + 0 - 0.5 * (0 / 0.66) = 159375000apoint 
 
 //Year(period) x=2 and bondedRatio = 0.7
